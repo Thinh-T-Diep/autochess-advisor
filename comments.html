@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Feedback</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:light">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+        integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="icon" href="Media/redaxe-glasses-icon.png">
+
+    <script src="header-display-functions.js"></script>
+</head>
+
+<body>
+
+    <!-- Big Title -->
+    <a href="index.html" class="jumbotron jumbotron-fluid text-center header-title">
+        <div class="container-fluid header-title">
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="Media/redaxe-glasses-icon.png" class="img-fluid float-md-left" alt="Logo"
+                        style="width: 300px;">
+                </div>
+
+                <div class="col-md-6 d-flex flex-column justify-content-center align-items-center">
+                    <!-- Text for screen size extra large and above -->
+                    <h1 class="d-none d-xl-block display-2">Autochess Advisor</h1>
+                    <h3 class="d-none d-xl-block header-subtitle"></h3>
+
+                    <!-- Text for screen size between large and extra large -->
+                    <h1 class="d-none d-lg-block d-xl-none display-3">Autochess Advisor</h1>
+                    <h4 class="d-none d-lg-block d-xl-none header-subtitle"></h4>
+
+                    <!-- Text for screen size below large  -->
+                    <h1 class="d-lg-none display-4">Autochess Advisor</h1>
+
+                    <!-- Text for screen below medium -->
+                    <h5 class="d-md-none header-subtitle"></h5>
+                </div>
+
+                <!-- Text on right side-->
+                <div class="col-md-3 d-flex flex-column justify-content-center align-items-center">
+                    <!-- Unique Name Display between screen medium and large -->
+                    <h4 class="d-none d-md-block d-lg-none header-subtitle"></h4>
+
+                    <!-- For XL screens and above -->
+                    <h3 class="d-none d-xl-block header-subtitle-2"></h3>
+
+                    <!-- For screens between large and XL -->
+                    <h4 class="d-none d-lg-block d-xl-none header-subtitle-2"></h4>
+
+                    <!-- For screen below large -->
+                    <h5 class="d-lg-none text-center header-subtitle-2"></h5>
+                </div>
+            </div>
+        </div>
+    </a>
+
+
+    <!-- A horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar navbar-expand-sm sticky-top navbar-dark">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="index.html">
+            <img src="Media/redaxe-glasses-icon.png" alt="Logo-Mini" style="width: 40px;">
+        </a>
+
+        <!-- Collapsible Navbar Button -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapsible Navbar -->
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <!-- Links -->
+            <ul class="navbar-nav nav-fill w-100 align-items-start">
+                <li class="nav-item">
+                    <a class="nav-link" href="empty-page.html"><i class="fas fa-chess"></i> Chess Pieces</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="empty-page.html"><i class="fab fa-react"></i> Synergies</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="empty-page.html"><i class="fas fa-chess-board"></i> Formations</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="comments.html"><i class="fas fa-comment-alt"></i> Feedback</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Comment Form -->
+    <div class="row color-band-1">
+        <div class="col-1"></div>
+        <div class="col-6 d-flex flex-column justify-content-center align-items-start section-content">
+            <h3 class="display-4 d-none d-lg-flex section-title">We're listening</h3>
+            <h1 class="d-none d-md-flex d-lg-none section-title">We're listening</h1>
+            <h3 class="d-flex d-md-none section-title">We're listening</h3>
+
+            <div class="container">
+                <form action="comments-success.html" class="needs-validation d-flex flex-column" novalidate>
+                    <div class="form-group">
+                        <label for="uname">Username:</label>
+                        <input type="text" class="form-control" id="uname" placeholder="Enter username" name="uname"
+                            required style="max-width: 300px;">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Please fill out this field.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email"
+                            required style="max-width: 300px;">
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Please fill out with vaid email address.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="comments">Your Comments</label><br>
+                        <textarea name="comments" class="form-control comment-area" id="comments" rows="7"
+                            placeholder="Enter your comments here" required></textarea>
+                        <div class="valid-feedback"></div>
+                        <div class="invalid-feedback">Please enter your comments.</div>
+                    </div>
+                    <div class="d-flex justify-self-end align-self-end">
+                        <button type="submit" class="btn btn-primary justify-self-end align-self-end">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-5 d-flex justify-content-start align-items-center">
+            <img class="img-fluid" src="Media/wind-ranger.png" alt="Wind Ranger">
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="row bg-dark text-light">
+            <div class="col-1"></div>
+            <div class="col footer-content">
+                <p>2019. By Thinh T. Diep, for RMIT COSC 2430 - Web Programming - Assignment 1</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+        // Disable form submissions if there are invalid fields
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Get the forms we want to add validation styles to
+                var forms = document.getElementsByClassName('needs-validation');
+                // Loop over them and prevent submission
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+</body>
+
+</html>
